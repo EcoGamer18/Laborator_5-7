@@ -36,6 +36,13 @@ mutare_locatie|A1|Citirea salii din care vrem sa mutam obiectele|E1S2(caz bun)<b
 <br>|A2|Citirea salii in care vrem sa mutam obiectele|E2S5(caz bun)<br>ERRs54(caz de eroare)
 <br>|A3|Modificarea locatiei obiectelor din lista
 <br>|A4|Updatarea listei de obiecte cu varianta noua a lor
-concatenare_descriere|A1|
+concatenare_descriere|A1|Citirea unui pret|1598(caz bun)<br>sad554(caz care da eroare)
+<br>|A2|Citire sirului care va fi concatenat obiectelor cu pret mai mare decat valoarea data|"dsdsa"(caz bun)
+<br>|A3|Modificarea obiectelor din lista care indeplinesc conditia data
+<br>|A4|Updatarea liste de obiecte cu varianta noua a obiectelor
+cel_mai_mare_pret_per_locatie|A1|Crearea unei liste de dictionare de forma{"locatie":"str locatie","pret_maxim" : pret}|
+<br>|A2|Introducerea in lista dictionare cu locatiile obiectelor si pretului maxim aflat la locatia respectiva|
+<br>|A3|Afisarea listei de dictionare|
+ordonare_crescatoare_pret|A1|
 
 
