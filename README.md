@@ -21,6 +21,7 @@ Vor  fi  suportate operațiile:
 5. Ordonarea obiectelor crescător după prețul de achiziție.
 6. Afișarea sumelor prețurilor pentru fiecare locație.
 7. Undo.
+8. Redo.
 
 **Atentie! Se foloseste biblioteca simple_colors. 
 Daca nu e deja instalata, scrieti in cmd :**
