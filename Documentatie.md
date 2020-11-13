@@ -13,6 +13,7 @@
   5. Ordonarea obiectelor crescător după prețul de achiziție.
   6. Afișarea sumelor prețurilor pentru fiecare locație.
   7. Undo.
+  8. Redo.
 
 **Functionalitati**
 
