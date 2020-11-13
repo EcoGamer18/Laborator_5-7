@@ -10,7 +10,7 @@ Fiecare student primește o problemă de mai jos. Trebuie predat:
 *Temele se predau exclusiv în PyCharm, Eclipse+PyDev sau Visual Studio.*
 
 
-**B.Scrieți un program pentru gestionarea unui inventar  dintr-o instituție.
+***B.Scrieți un program pentru gestionarea unui inventar  dintr-o instituție.***
 
 Vor  fi  suportate operațiile:
 
