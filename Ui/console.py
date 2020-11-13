@@ -304,4 +304,3 @@ def run_menu(lista, undo_lista):
             print(red("Optiune invalida.", ['bold']))
         """if op == "1" and op == "2" and op == "3" and op == "4" and op == "5":
             #f1.write(str(undo_lista))"""
-        print(n)
