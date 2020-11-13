@@ -24,7 +24,7 @@ Vor  fi  suportate operațiile:
 
 **Atentie! Se foloseste biblioteca simple_colors. 
 Daca nu e deja instalata, scrieti in cmd :**
-        *pip install simplet_colors* 
+        *pip install simple_colors* 
 
 
 [Simple_colors](https://pypi.org/project/simple-colors/) 
