@@ -281,7 +281,7 @@ def run_menu(lista, undo_lista):
         elif op == "6":
             ui_suma_preturi_per_locatie(lista)
         elif op == "u":
-            if n==len(lista):
+            if n==len(lists):
                 lists.append(lista)
             if n > 0:
                 lista = lists[n-1]
