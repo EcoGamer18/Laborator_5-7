@@ -213,7 +213,8 @@ def meniu_principal():
     print("4.Afisati cel mai mare pret per fiecare locatie")
     print("5.Ordonare crescatoare lista obiectelor dupa pret")
     print("6.Afisarea sumelor prețurilor pentru fiecare locație")
-    print("u.Undo la ultima operatie facuta")
+    print("u.Undo ultima operatie facuta")
+    print("r.Redo ultima operatie")
     print("x.Iesire\n")
 
 
@@ -250,35 +251,52 @@ def run_menu(lista, undo_lista):
     """f1 = open('./output.txt', 'a', buffering=1)
     f1.write(str(undo_lista))"""
     lists = []
+    n=0
     while True:
         meniu_principal()
         op = input(yellow('Alegeti o optiune:\n', ['bold']))
         if op == "1":
+            del lists[n:]
             lista, undo_lista, done = run_menu_crud(lista, undo_lista)
             if done == True:
                 lists.append(undo_lista)
+                n+=1
         elif op == "f":
             ui_afisare(lista)
         elif op == "2":
+            del lists[n:]
             lista, undo_lista = ui_mutare(lista)
             lists.append(undo_lista)
         elif op == "3":
+            del lists[n:]
             lista, undo_lista = ui_concatenare(lista)
             lists.append(undo_lista)
         elif op == "4":
+            del lists[n:]
             ui_cel_mai_mare_pret_per_locatie(lista)
         elif op == "5":
+            del lists[n:]
             lista, undo_lista = ui_ordonare_pret(lista)
             lists.append(undo_lista)
         elif op == "6":
             ui_suma_preturi_per_locatie(lista)
         elif op == "u":
-            if len(lists) > 0:
-                lista = lists[len(lists) - 1]
-                lists.pop()
+            if n==len(lista):
+                lists.append(lista)
+            if n > 0:
+                lista = lists[n-1]
+                n-=1
             else:
                 print(red("Nu mai sunt operatii facute!"))
             # lista = f_undo_lista(undo_lista)
+        elif op=="r":
+            if n==0:
+                n=1
+            if len(lists)>n:
+                lista=lists[n]
+                n=n+1
+            else:
+                print(red("Nu mai sunt operatii la care poti da redo"))
         elif op == "x":
             # f1.close()
             break
@@ -286,3 +304,4 @@ def run_menu(lista, undo_lista):
             print(red("Optiune invalida.", ['bold']))
         """if op == "1" and op == "2" and op == "3" and op == "4" and op == "5":
             #f1.write(str(undo_lista))"""
+        print(n)
