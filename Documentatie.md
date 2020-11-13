@@ -43,6 +43,11 @@ concatenare_descriere|A1|Citirea unui pret|1598(caz bun)<br>sad554(caz care da e
 cel_mai_mare_pret_per_locatie|A1|Crearea unei liste de dictionare de forma{"locatie":"str locatie","pret_maxim" : pret}|
 <br>|A2|Introducerea in lista dictionare cu locatiile obiectelor si pretului maxim aflat la locatia respectiva|
 <br>|A3|Afisarea listei de dictionare|
-ordonare_crescatoare_pret|A1|
+ordonare_crescatoare_pret|A1|Ordonarea listei de obiecte dupa pret|
+<br>|A2|Updatarea listei de obiecte cu lista ordonata|
+suma_preturi_per_locatie|A1|Crearea unei liste de dictionare de forma{"locatie":"str locatie","suma_preturi" : preturi}|
+<br>|A2|Introducerea in lista dictionare cu locatiile obiectelor si pretului aflat la locatia respectiva|
+<br>|A3|Sumarea preturilor din fiecare locatie|
+<br>|A4|Afisarea listei de dictionare|
 
 
