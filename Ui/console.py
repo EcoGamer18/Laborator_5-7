@@ -56,6 +56,7 @@ def ui_adauga_obiect(lista):
         print(red("Valoare incorecta. Locatia trebuie sa aiba 4 caractere.", ["italic"]))
         return lista, undo_lista
     # returnare lista cu obiectul adaugat
+    print(yellow("Obiectul a fost adaugat listei.",["italic"]))
     return adaugare_obiect(lista, id, nume, descriere, pret, locatie), undo_lista
 
 
@@ -69,6 +70,7 @@ def ui_sterge_obiect(lista):
         print(red("Nu exista un obiect cu id-ul dat.", ["italic"]))
         return lista, undo_lista
     # returnare lista modificata
+    print(yellow("Obiectul cu id-ul dat a fost sters din lista.", ["italic"]))
     return sterge_obiect(lista, id), undo_lista
 
 
@@ -102,6 +104,7 @@ def ui_modificare(lista):
         print(red("Valoare incorecta. Locatia trebuie sa aiba 4 caractere.", ["italic"]))
         return lista, undo_lista
     # returnare lista modificata
+    print(yellow("Obiectul cu id-ul dat a fost modificat.", ["italic"]))
     return modificare_obiect(lista, id, nume, descriere, pret, locatie), undo_lista
 
 
@@ -129,14 +132,23 @@ def ui_mutare(lista):
         except ValueError:
             print(red("Sala trebuie sa aiba 4 caractere.", ["italic"]))
             ok = False
+    print(yellow("Obiectele au fost mutate in sala data!", ["italic"]))
     return mutare_locatie(lista, sala_init, sala_fin), undo_lista
 
 
 def ui_concatenare(lista):
     undo_lista = copy.deepcopy(lista)
-    pret_citit = int(input("Introduceti un pret.\n"))
+    try:
+        pret_citit = float(input("Introduceti un pret."))
+        if pret_citit < 0:
+            raise ValueError
+        # ValueError prinde si cazul in care se citeste un string in loc de float
+    except ValueError:
+        print(red("Pretul trebuie sa fie un numar pozitiv de tip float.",["italic"]))
+        return lista, undo_lista
     sir = input("Introduceti sirul pe care vreti sa il atasati obiectelor "
                 "cu pret mai mare decat valoare data.\n")
+    print(yellow("Sirul dat a fost concatenat la obiectele cu pret mai mare decat cel dat!", ["italic"]))
     return concatenare_descriere(lista, pret_citit, sir), undo_lista
 
 
@@ -154,6 +166,7 @@ def ui_cel_mai_mare_pret_per_locatie(lista):
 
 def ui_ordonare_pret(lista):
     undo_lista = copy.deepcopy(lista)
+    print(yellow("Obiectele au fost ordonate!", ["italic"]))
     return ordonare_crescatoare_pret(lista), undo_lista
 
 
@@ -218,13 +231,13 @@ def run_menu_crud(lista, undo_lista):
     meniu_crud()
     op = input(yellow('Alegeti o optiune:\n', ['bold']))
     if op == "a":
-        lista, undo_lista=ui_adauga_obiect(lista)
+        lista, undo_lista = ui_adauga_obiect(lista)
         return lista, undo_lista, True
     elif op == "s":
-        lista, undo_lista=ui_sterge_obiect(lista)
+        lista, undo_lista = ui_sterge_obiect(lista)
         return lista, undo_lista, True
     elif op == "m":
-        lista,undo_lista=ui_modificare(lista)
+        lista, undo_lista = ui_modificare(lista)
         return lista, undo_lista, True
     elif op == "x":
         return lista, undo_lista, False
@@ -249,17 +262,14 @@ def run_menu(lista, undo_lista):
         elif op == "2":
             lista, undo_lista = ui_mutare(lista)
             lists.append(undo_lista)
-            print(yellow("Obiectele au fost mutate in sala data!", ["italic"]))
         elif op == "3":
             lista, undo_lista = ui_concatenare(lista)
             lists.append(undo_lista)
-            print(yellow("Sirul dat a fost concatenat la obiectele cu pret mai mare decat cel dat!", ["italic"]))
         elif op == "4":
             ui_cel_mai_mare_pret_per_locatie(lista)
         elif op == "5":
             lista, undo_lista = ui_ordonare_pret(lista)
             lists.append(undo_lista)
-            print(yellow("Obiectele au fost ordonate!", ["italic"]))
         elif op == "6":
             ui_suma_preturi_per_locatie(lista)
         elif op == "u":
