@@ -1,21 +1,16 @@
 # Laborator_5-7
 
 Fiecare student primește o problemă de mai jos. Trebuie predat:
-  
-  1.Lista de funcționalități și planul de iterații –săptămâna 1.
-  
-  2.Scenarii de rulare pentru fiecare funcționalitate implementată –săptămânal.
-  
-  3.Lista de activități pentru fiecare funcționalitate implementată –săptămânal.
-  
-  4.Alte cerințe comunicate în cadrul laboratoarelor –săptămânal. 
-  
-  5.Minim o funcționalitate în fiecare săptămână.
+  1. Lista de funcționalități și planul de iterații –săptămâna 1.
+  2. Scenarii de rulare pentru fiecare funcționalitate implementată –săptămânal.
+  3. Lista de activități pentru fiecare funcționalitate implementată –săptămânal.
+  4. Alte cerințe comunicate în cadrul laboratoarelor –săptămânal. 
+  5. Minim o funcționalitate în fiecare săptămână.
 
 *Temele se predau exclusiv în PyCharm, Eclipse+PyDev sau Visual Studio.*
 
 
-B.Scrieți un program pentru gestionarea unui inventar  dintr-o instituție.  
+**B.Scrieți un program pentru gestionarea unui inventar  dintr-o instituție.  **
 
 Vor  fi  suportate operațiile:
 
