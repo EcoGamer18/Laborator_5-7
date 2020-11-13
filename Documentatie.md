@@ -28,6 +28,51 @@ ordonare_crescatoare_pret|Ordonarea obiectelor crescător după prețul de achiz
 suma_preturi_per_locatie|Afișarea sumelor prețurilor pentru fiecare locație.
 
 
+**Scenarii de rulare**
+
+Functionalitate|Program|Utilizator
+---------------|-------|----------
+mutare_locatie|Introduceti din ce sala vreti sa mutati obiectele.|
+<br>|<br>|ddd55
+<br>|Sala trebuie sa aiba 4 caractere.|<br>
+mutare_locatie|Introduceti din ce sala vreti sa mutati obiectele.|
+<br>|<br>|ddd5
+<br>|Introduceti in care sala vreti sa mutati obiectele.|<br>
+<br>|<br>|d445
+<br>|Obiectele au fost mutate in sala data!|
+concatenare_descriere|Introduceti un pret.|
+<br>|<br>|1547
+<br>|Introduceti sirul pe care vreti sa il atasati obiectelor cu pret mai mare decat valoare data.|
+<br>|<br>| Apartine din clasa 1 de calitate.
+<br>|Sirul dat a fost concatenat la obiectele cu pret mai mare decat cel dat!|
+adaugare_obiect|Introduceti id-ul:|
+<br>|<br>|5
+<br>|Introduceti numele:|
+<br>|<br>|Dictionar
+<br>|Introduceti descrierea:|
+<br>|<br>|Roman
+<br>|Introduceti pretul:|
+<br>|<br>|452
+<br>|Introduceti locatia:|
+<br>|<br>|E1S8
+<br>|Obiectul a fost adaugat listei.|
+sterge_obiect|Introduceti id-ul obiectului pe are vreti sa il stergeti:|
+<br>|<br>|4
+<br>|Obiectul cu id-ul dat a fost sters din lista.|
+modificare_obiect|Introduceti id-ul obiectului pe are vreti sa il modificati:|
+<br>|<br>|2
+<br>|Introduceti un nume nou sau nimic pentru a nu schimba:|
+<br>|<br>|
+<br>|Introduceti o descriere noua sau nimic pentru a nu schimba:|
+<br>|<br>|Cu coperta din piele
+<br>|Introduceti un pret nou sau -1 pentru a nu schimba:|
+<br>|<br>|486
+<br>|Introduceti o locatie noua sau nimic pentru a nu schimba:|
+<br>|<br>|
+<br>|Obiectul cu id-ul dat a fost modificat.|
+
+
+
 **Lista de activitati**
 
 Functionalitate|Activitate|Descriere|Cazuri de testare
